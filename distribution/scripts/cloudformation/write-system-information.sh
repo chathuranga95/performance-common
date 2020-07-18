@@ -104,7 +104,6 @@ if command_exists lscpu; then
 fi
 
 if command_exists lshw; then
-    lshw >$output_directory/lshw.txt 2>&1
     lshw -short >$output_directory/lshw-short.txt 2>&1
     lshw -json >$output_directory/lshw.json 2>/dev/null
     while IFS=',' read id description size units capabilities; do
